@@ -1,5 +1,6 @@
 use anyhow::*;
-use adv_code_2024::*;
+use adv_code_2024::token_read::TokenRead;
+use adv_code_2024::wrapper::solve_day;
 
 const TEST: &str = "\
 3   4
@@ -41,7 +42,9 @@ fn main() -> Result<()> {
         "01",
         TEST,
         Some(11),
+        Some(2580760),
         Some(31),
+        Some(25358365),
         part1,
         part2,
     )
