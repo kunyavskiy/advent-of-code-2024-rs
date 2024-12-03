@@ -20,6 +20,10 @@ impl TokenRead<'_> {
         let input_file: String = "input/".to_owned() + day + ".txt";
         TokenRead::new(BufReader::new(File::open(input_file).unwrap()))
     }
+    
+    pub fn next_line(&mut self) -> Option<String> {
+        self.line_iter.next()
+    }
 
     pub fn next_line_strings(&mut self) -> Option<Vec<String>> {
         let mut result = vec![self.next_str()?];
